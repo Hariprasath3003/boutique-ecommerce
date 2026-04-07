@@ -1,0 +1,146 @@
+/* Order Success Styles */
+.order-success-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.success-card {
+  background: white;
+  border-radius: 16px;
+  padding: 50px 40px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 48px;
+  color: white;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.success-card h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.success-card > p {
+  color: var(--text-light);
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.order-details {
+  background: var(--light-bg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-light);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span:first-child {
+  font-weight: 600;
+}
+
+.detail-row strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.success-items {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.success-items h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.success-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.success-item:last-child {
+  border-bottom: none;
+}
+
+.success-item span:first-child {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.success-item span:last-child {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.success-actions {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.success-actions .btn {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .order-success-container {
+    margin: 40px auto;
+    padding: 10px;
+  }
+
+  .success-card {
+    padding: 30px 20px;
+  }
+
+  .success-card h1 {
+    font-size: 24px;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+  }
+}

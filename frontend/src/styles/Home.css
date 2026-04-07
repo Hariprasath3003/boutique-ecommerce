@@ -1,0 +1,132 @@
+/* Home Page Styles */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.home-container.home-centered {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.moral-section {
+  margin-bottom: 60px;
+}
+
+.brand-title {
+  font-size: 72px;
+  font-weight: 300;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
+  font-family: 'Playfair Display', serif;
+}
+
+.fashion-moral {
+  font-size: 28px;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  position: relative;
+  font-family: 'Georgia', serif;
+  padding: 0 40px;
+}
+
+.fashion-moral::before {
+  content: '"';
+  font-size: 60px;
+  color: #667eea;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  line-height: 1;
+}
+
+.fashion-moral::after {
+  content: '"';
+  font-size: 60px;
+  color: #667eea;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  line-height: 1;
+}
+
+.fashion-moral cite {
+  display: block;
+  font-size: 18px;
+  color: #666;
+  font-style: normal;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.sub-moral {
+  font-size: 20px;
+  color: #888;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.cta-section {
+  margin-top: 20px;
+}
+
+.btn-elegant {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.btn-elegant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 48px;
+  }
+
+  .fashion-moral {
+    font-size: 24px;
+  }
+
+  .fashion-moral::before,
+  .fashion-moral::after {
+    font-size: 40px;
+  }
+
+  .sub-moral {
+    font-size: 18px;
+  }
+
+  .btn-elegant {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,98 @@
+BOUTIQUE E-COMMERCE DEPLOYMENT GUIDE
+=====================================
+
+FREE DEPLOYMENT OPTIONS FOR DJANGO BACKEND + REACT FRONTEND
+
+RECOMMENDED STACK: VERCEL (Frontend) + RENDER (Backend)
+=======================================================
+
+BACKEND DEPLOYMENT (RENDER.COM)
+-------------------------------
+
+1. Sign up at render.com
+2. Click "New" -> "Web Service"
+3. Connect your GitHub repo
+4. Configure:
+   - Name: boutique-backend
+   - Runtime: Python 3
+   - Build Command: pip install -r requirements.txt
+   - Start Command: cd boutique_store && python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT
+
+5. Environment Variables:
+   DJANGO_SETTINGS_MODULE=boutique_store.settings
+   SECRET_KEY=your-super-secret-key-here-make-it-long-and-random
+   DEBUG=False
+   ALLOWED_HOSTS=*
+   CORS_ALLOWED_ORIGINS=https://your-frontend-domain.vercel.app
+
+6. Click "Create Web Service"
+
+FRONTEND DEPLOYMENT (VERCEL.COM)
+--------------------------------
+
+1. Sign up at vercel.com
+2. Click "New Project"
+3. Import your GitHub repo
+4. Configure:
+   - Framework: Create React App
+   - Root Directory: frontend
+   - Build Command: npm run build
+   - Output Directory: build
+
+5. Environment Variables:
+   REACT_APP_API_URL=https://your-render-backend.onrender.com
+
+6. Click "Deploy"
+
+ALTERNATIVE STACK: NETLIFY (Frontend) + RAILWAY (Backend)
+======================================================
+
+BACKEND (RAILWAY.APP):
+1. Sign up at railway.app
+2. New Project -> Deploy from GitHub
+3. Select repo (Railway auto-detects Python/Django)
+4. Add same environment variables as above
+
+FRONTEND (NETLIFY.COM):
+1. Sign up at netlify.com
+2. New site from Git
+3. Base directory: frontend
+4. Build command: npm run build
+5. Publish directory: build
+6. Add REACT_APP_API_URL environment variable
+
+POST-DEPLOYMENT CHECKLIST:
+=========================
+
+1. Update CORS_ALLOWED_ORIGINS in Django settings with your frontend URL
+2. Run database migrations on deployed backend
+3. Test user registration and login
+4. Test product browsing and cart functionality
+5. Verify API calls work between frontend and backend
+
+FREE TIER LIMITS:
+================
+
+- Render: 750 hours/month, sleeps after inactivity
+- Railway: $5 credit, then pay-as-you-go
+- Vercel: Unlimited bandwidth
+- Netlify: 100GB bandwidth/month
+
+SECURITY NOTES:
+==============
+
+- Change SECRET_KEY to long random string
+- Set DEBUG=False
+- Use HTTPS (provided automatically)
+- Configure proper CORS
+
+TROUBLESHOOTING:
+===============
+
+- Check platform logs for errors
+- Verify environment variables
+- Test API endpoints directly
+- Check browser console
+
+Your boutique e-commerce app is ready for the world! 🌟</content>
+<parameter name="filePath">e:\shopy procx\DEPLOYMENT_GUIDE.txt
