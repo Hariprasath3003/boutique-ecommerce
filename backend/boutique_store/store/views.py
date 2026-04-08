@@ -60,6 +60,21 @@ class AuthViewSet(viewsets.ViewSet):
     def logout(self, request):
         request.user.auth_token.delete()
         return Response({'message': 'Logout successful'}, status=status.HTTP_200_OK)
+    
+    @action(detail=False, methods=['get'])
+    def check_auth(self, request):
+        """Check authentication status"""
+        user = request.user
+        if user.is_authenticated:
+            user_role = get_user_role(user)
+            return Response({
+                'authenticated': True,
+                'user': user.username,
+                'role': user_role,
+                'is_staff': user.is_staff,
+                'is_superuser': user.is_superuser
+            })
+        return Response({'authenticated': False}, status=status.HTTP_401_UNAUTHORIZED)
 
 
 class ProductViewSet(viewsets.ModelViewSet):
