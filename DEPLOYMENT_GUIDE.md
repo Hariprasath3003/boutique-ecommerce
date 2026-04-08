@@ -95,8 +95,8 @@ services:
    - **Build Command**: `npm run build`
    - **Output Directory**: build
 5. Add environment variables:
-   - `REACT_APP_API_BASE_URL=https://your-render-backend-url.onrender.com/api`
-   - Or use `REACT_APP_API_URL` for compatibility if you prefer
+   - `REACT_APP_API_BASE_URL=https://boutique-ecommerce-ydch.onrender.com/api`
+   - Or use `REACT_APP_API_URL=https://boutique-ecommerce-ydch.onrender.com/api` for compatibility
 6. Click "Deploy"
 
 ## Option 2: Alternative Free Stack (Netlify + Railway)
