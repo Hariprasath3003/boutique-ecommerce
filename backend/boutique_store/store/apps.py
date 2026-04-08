@@ -8,7 +8,7 @@ class StoreConfig(AppConfig):
 
     def ready(self):
         # Create admin user on every startup (safer for deployment)
-        create_admin_user()
+        create_admin_user(None)
 
 
 def create_admin_user(sender, **kwargs):
