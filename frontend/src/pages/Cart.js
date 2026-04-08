@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import '../styles/Cart.css';
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { cart, loading, removeFromCart, updateCartItem, clearCart } = useContext(CartContext);
+  const { cart, loading, removeFromCart, updateCartItem } = useContext(CartContext);
 
   const handleRemoveItem = async (itemId) => {
     try {

@@ -13,7 +13,7 @@ const OrderSuccess = () => {
     } else {
       navigate('/shop');
     }
-  }, []);
+  }, [location.state, navigate]);
 
   if (!order) {
     return <div className="loading">Loading...</div>;
