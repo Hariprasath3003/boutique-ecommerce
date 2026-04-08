@@ -11,5 +11,7 @@ services:
         value: NMgAse9tqdq0NI2bTkni3f3U_JZFqICQ0QnZhjPWz9g04Ato64ett4tkXyEHmsB2MPI
       - key: DEBUG
         value: False
+      - key: ALLOWED_HOSTS
+        value: *
       - key: DATABASE_URL
         value: sqlite:///db.sqlite3
