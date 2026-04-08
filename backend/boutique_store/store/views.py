@@ -72,9 +72,14 @@ class AuthViewSet(viewsets.ViewSet):
                 'user': user.username,
                 'role': user_role,
                 'is_staff': user.is_staff,
-                'is_superuser': user.is_superuser
+                'is_superuser': user.is_superuser,
+                'token_valid': True
             })
-        return Response({'authenticated': False}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response({
+            'authenticated': False,
+            'token_valid': False,
+            'error': 'No valid authentication token provided'
+        }, status=status.HTTP_401_UNAUTHORIZED)
 
 
 class ProductViewSet(viewsets.ModelViewSet):
