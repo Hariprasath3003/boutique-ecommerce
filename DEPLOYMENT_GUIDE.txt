@@ -40,7 +40,8 @@ FRONTEND DEPLOYMENT (VERCEL.COM)
    - Output Directory: build
 
 5. Environment Variables:
-   REACT_APP_API_URL=https://your-render-backend.onrender.com
+   REACT_APP_API_BASE_URL=https://your-render-backend.onrender.com/api
+   Or use REACT_APP_API_URL for compatibility
 
 6. Click "Deploy"
 
@@ -59,7 +60,7 @@ FRONTEND (NETLIFY.COM):
 3. Base directory: frontend
 4. Build command: npm run build
 5. Publish directory: build
-6. Add REACT_APP_API_URL environment variable
+6. Add REACT_APP_API_BASE_URL environment variable (or REACT_APP_API_URL for compatibility)
 
 POST-DEPLOYMENT CHECKLIST:
 =========================

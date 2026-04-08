@@ -95,7 +95,8 @@ services:
    - **Build Command**: `npm run build`
    - **Output Directory**: build
 5. Add environment variables:
-   - `REACT_APP_API_URL=https://your-render-backend-url.onrender.com`
+   - `REACT_APP_API_BASE_URL=https://your-render-backend-url.onrender.com/api`
+   - Or use `REACT_APP_API_URL` for compatibility if you prefer
 6. Click "Deploy"
 
 ## Option 2: Alternative Free Stack (Netlify + Railway)
@@ -123,7 +124,8 @@ services:
    - **Build command**: `npm run build`
    - **Publish directory**: build
 5. Add environment variables:
-   - `REACT_APP_API_URL=https://your-railway-backend-url.up.railway.app`
+   - `REACT_APP_API_BASE_URL=https://your-railway-backend-url.up.railway.app/api`
+   - Or use `REACT_APP_API_URL` for compatibility
 6. Click "Deploy site"
 
 ## Environment Variables Setup
@@ -140,7 +142,9 @@ DATABASE_URL=sqlite:///db.sqlite3
 
 ### Frontend Environment Variables
 ```
-REACT_APP_API_URL=https://your-backend-domain.com
+REACT_APP_API_BASE_URL=https://your-backend-domain.com/api
+# OR for compatibility:
+REACT_APP_API_URL=https://your-backend-domain.com/api
 ```
 
 ## Post-Deployment Steps
