@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: boutique-backend
+    runtime: python3
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python boutique_store/manage.py runserver 0.0.0.0:$PORT"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: boutique_store.settings
+      - key: SECRET_KEY
+        value: NMgAse9tqdq0NI2bTkni3f3U_JZFqICQ0QnZhjPWz9g04Ato64ett4tkXyEHmsB2MPI
+      - key: DEBUG
+        value: False
+      - key: DATABASE_URL
+        value: sqlite:///db.sqlite3
