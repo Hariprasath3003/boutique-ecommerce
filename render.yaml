@@ -1,9 +1,8 @@
 services:
   - type: web
     name: boutique-backend
-    runtime: python3
-    pythonVersion: 3.11.4
-    buildCommand: "pip install --upgrade pip setuptools wheel && pip install -r backend/requirements.txt"
+    runtime: python3.11
+    buildCommand: "python -m pip install --upgrade pip setuptools wheel && pip install -r backend/requirements.txt"
     startCommand: "cd backend/boutique_store && python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
